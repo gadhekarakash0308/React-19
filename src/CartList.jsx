@@ -77,7 +77,8 @@ const handleSubmite=()=>{
             .reduce((sum, item) => sum + item.price * (item.Quantity ?? 1), 0)
             .toFixed(2)}
         </div>
-        <div className="placeOrder-btn" onClick={handleSubmite}>Place Order</div>
+       {cartItems.length>0?<button className="placeOrder-btn" onClick={handleSubmite}>Place Order</button>:null}
+        
       </div>
      
     </>
